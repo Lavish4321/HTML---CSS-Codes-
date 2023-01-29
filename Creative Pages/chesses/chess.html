@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <title>Chess</title>
+
+    <style>
+
+        #a {
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            border: 8px solid black;
+            margin-top: 10%;
+        }
+
+        #r1 , #r2 , #r3 , #r4 , 
+        #r5 ,  #r6 ,  #r7 ,  #r8  {
+            height: 12.5%;
+            width: 100%;
+            
+        }
+
+        #r1 div , #r2 div , #r3 div , #r4 div ,
+         #r5 div , #r6 div , #r7 div , #r8 div {
+            float: left;
+            height: 100%;
+            width: 12.5%;
+        }
+
+        i:hover {
+            transform: scale(1.2);
+            transition: 100ms;
+        }
+
+        #r1c2 , #r1c4 , #r1c6 , #r1c8 ,
+         #r2c1 ,#r2c3 , #r2c5 ,#r2c7 ,
+          #r3c2 , #r3c4 ,#r3c6 , #r3c8 ,
+          #r4c1 , #r4c3 ,#r4c5 , #r4c7 ,
+          #r5c2 ,#r5c4 ,#r5c6 ,#r5c8 ,
+           #r6c1 ,#r6c3 ,#r6c5 ,#r6c7 ,
+            #r7c2 , #r7c4 ,#r7c6 , #r7c8 ,
+            #r8c1 ,#r8c3 ,#r8c5 ,#r8c7  {
+            background-color: black;
+        }
+        
+
+        i {
+            font-size: 50px;
+            text-shadow: white 0px 1px 35px;
+        }
+
+        #pw1 {
+            padding-left: 26%;
+            padding-top: 10%;
+            color: black;
+            text-shadow: black 0px 1px 15px;
+        }
+
+        #pb1 {
+            padding-left: 26%;
+            padding-top: 10%;
+            color: black; 
+        }
+
+        #pw2 {
+            padding-left: 26%;
+            padding-top: 10%;
+            color: rgb(255, 255, 255);
+            text-shadow: black 0px 1px 20px;
+        }
+
+        #pb2 {
+            padding-left: 26%;
+            padding-top: 10%;
+            color: rgb(246, 246, 246); 
+        }
+
+        #rw1 {
+            padding-left: 23%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 24px;
+        }
+
+        #kb1 {
+            padding-left:25%;
+            padding-top: 15%;
+        }
+
+        #bw1 {
+            padding-left: 25%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 8px;
+        }
+
+        #bq {
+            padding-left: 15%;
+            padding-top: 15%;
+        }
+
+        #bk {
+            padding-left: 20%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 8px;
+        }
+
+        #bb1 {
+            padding-left: 25%;
+            padding-top: 15%;
+        }
+
+        #kw1 {
+            padding-left:25%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 6px;
+        }
+
+        #rb1 {
+            padding-left: 23%;
+            padding-top: 15%;
+        }
+
+        /* White Pieces Css*/
+
+        #rw2 {
+            color: white;
+            padding-left: 23%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 8px;
+        }
+
+        #kb2 {
+            color: white;
+            padding-left:25%;
+            padding-top: 15%;
+        }
+
+        #bw2 {
+            color: white;
+            padding-left: 25%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 8px;
+        }
+
+        #wq {
+            color: white;
+            padding-left: 15%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 8px;
+        }
+
+        #wk {
+            color: white;
+            padding-left: 20%;
+            padding-top: 15%;
+        }
+
+        #bb2 {
+            color: white;
+            padding-left: 25%;
+            padding-top: 15%;
+        }
+
+        #kw2 {
+            color: white;
+            padding-left:25%;
+            padding-top: 15%;
+            text-shadow: black 1px 1px 6px;
+        }
+
+        #rb2 {
+            color: white;
+            padding-left: 23%;
+            padding-top: 15%;
+        }
+        
+        
+    </style>
+
+
+</head>
+<body>
+
+    <div id="a">
+        <div id="r1">
+            <div id="r1c1"><i class="fa-sharp fa-solid fa-chess-rook" id="rw1"></i></div>
+            <div id="r1c2"><i class="fa-sharp fa-solid fa-chess-knight" id="kb1"></i></div>
+            <div id="r1c3"><i class="fa-sharp fa-solid fa-chess-bishop" id="bw1"></i></div>
+            <div id="r1c4"><i class="fa-sharp fa-solid fa-chess-queen" id="bq"></i></div>
+            <div id="r1c5"><i class="fa-sharp fa-solid fa-chess-king" id="bk"></i></div>
+            <div id="r1c6"><i class="fa-sharp fa-solid fa-chess-bishop" id="bb1"></i></div>
+            <div id="r1c7"><i class="fa-sharp fa-solid fa-chess-knight" id="kw1"></i></div>
+            <div id="r1c8"><i class="fa-sharp fa-solid fa-chess-rook" id="rb1"></i></div>
+        </div>
+
+        <div id="r2">
+            <div id="r2c1"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb1"></i></div>
+            <div id="r2c2"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw1"></i></div>
+            <div id="r2c3"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb1"></i></div>
+            <div id="r2c4"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw1"></i></div>
+            <div id="r2c5"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb1"></i></div>
+            <div id="r2c6"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw1"></i></div>
+            <div id="r2c7"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb1"></i></div>
+            <div id="r2c8"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw1"></i></div>
+        </div>
+
+        <div id="r3">
+            <div id="r3c1"></div>
+            <div id="r3c2"></div>
+            <div id="r3c3"></div>
+            <div id="r3c4"></div>
+            <div id="r3c5"></div>
+            <div id="r3c6"></div>
+            <div id="r3c7"></div>
+            <div id="r3c8"></div>
+        </div>
+
+        <div id="r4">
+            <div id="r4c1"></div>
+            <div id="r4c2"></div>
+            <div id="r4c3"></div>
+            <div id="r4c4"></div>
+            <div id="r4c5"></div>
+            <div id="r4c6"></div>
+            <div id="r4c7"></div>
+            <div id="r4c8"></div>
+        </div>
+
+        <div id="r5">
+            <div id="r5c1"></div>
+            <div id="r5c2"></div>
+            <div id="r5c3"></div>
+            <div id="r5c4"></div>
+            <div id="r5c5"></div>
+            <div id="r5c6"></div>
+            <div id="r5c7"></div>
+            <div id="r5c8"></div>
+        </div>
+
+        <div id="r6">
+            <div id="r6c1"></div>
+            <div id="r6c2"></div>
+            <div id="r6c3"></div>
+            <div id="r6c4"></div>
+            <div id="r6c5"></div>
+            <div id="r6c6"></div>
+            <div id="r6c7"></div>
+            <div id="r6c8"></div>
+        </div>
+
+        <div id="r7">
+            <div id="r7c1"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw2"></i></div>
+            <div id="r7c2"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb2"></i></div>
+            <div id="r7c3"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw2"></i></div>
+            <div id="r7c4"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb2"></i></div>
+            <div id="r7c5"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw2"></i></div>
+            <div id="r7c6"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb2"></i></div>
+            <div id="r7c7"><i class="fa-sharp fa-solid fa-chess-pawn" id="pw2"></i></div>
+            <div id="r7c8"><i class="fa-sharp fa-solid fa-chess-pawn" id="pb2"></i></div>
+        </div>
+
+        <div id="r8">
+            <div id="r8c1"><i class="fa-sharp fa-solid fa-chess-rook" id="rb2"></i></div>
+            <div id="r8c2"><i class="fa-sharp fa-solid fa-chess-knight" id="kw2"></i></div>
+            <div id="r8c3"><i class="fa-sharp fa-solid fa-chess-bishop" id="bb2"></i></div>
+            <div id="r8c4"><i class="fa-sharp fa-solid fa-chess-queen" id="wq"></i></div>
+            <div id="r8c5"><i class="fa-sharp fa-solid fa-chess-king" id="wk"></i></div>
+            <div id="r8c6"><i class="fa-sharp fa-solid fa-chess-bishop" id="bw2"></i></div>
+            <div id="r8c7"><i class="fa-sharp fa-solid fa-chess-knight" id="kb2"></i></div>
+            <div id="r8c8"><i class="fa-sharp fa-solid fa-chess-rook" id="rw2"></i></div>
+        </div>
+    </div>
+    
+</body>
+</html>
