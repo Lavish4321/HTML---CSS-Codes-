@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Feedback</title>
+
+    <style>
+
+        body {
+            background-color: black;
+            background-image:url("");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        form {
+            margin: auto;
+            height: 340px;
+            width: 400px;
+            border: 2px solid;
+            border-radius: 20px;
+            padding-left: 10%;
+            margin-top: 70px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        #r1 {
+            height: 50px;
+            padding-top: 8%;
+        }
+
+        #textarea {
+            padding-top: 10px;
+            border: 0px;
+            border-radius: 20px;
+        }
+
+        #email {
+            width: 147px;
+            border-radius: 7px;
+        }
+
+        #footer {
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        #footer input {
+            border-radius: 9px;
+            font-size: 17px;
+        }
+
+        #submit {
+            margin-right: 20%;
+        }
+
+        #reset {
+            margin-right: 20%;
+        }
+
+        /*navbar css */
+
+        #navbar {
+            height: 10%;
+            overflow: hidden;
+        }
+        #navbar a {
+            float: left;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            margin-top: 10px;
+            margin-left: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #more {
+            float: left;
+        }
+
+        #more-btn {
+            border: none;
+            outline: none;
+            font-size: 20px;
+            background: none;
+            color: white;
+            padding-left: 25px;
+            padding-top: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #more-content {
+            display: none;
+            position: absolute;
+            background-color: ghostwhite;
+            max-width: 160px;
+            min-width: 145px;
+            border: 0px;
+            border-radius: 10px;
+        }
+
+        #more-content a{
+            float: none;
+            display: block;
+            text-align: left;
+            color: black;
+            padding-bottom: 10px;
+        }
+
+        #more:hover #more-content {
+            display: block;
+        }
+
+        #navbar #active {
+            color: black;
+            background-color: white;
+            width: 100px;
+            border: 2px solid;
+            border-radius: 7px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="navbar">
+        <a href="home.html">Home</a>
+        <a href="codes.html">Codes</a>
+        <a href="feedback.html" id="active">Feedback</a>
+
+        <div id="more">
+            <button id="more-btn">More</button>
+
+                <div id="more-content">
+                    <a href="">Contact Us</a>
+                    <a href="">Report</a>
+                </div>
+
+        </div>
+    </div>
+    <form action="home.html">
+        <div id="r1">
+            <label for="email" id="enter">Enter your E-Mail Id :-</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div id="r2">
+            <label for="txt" id="txt">Write Your Feedback :-</label><br><br>
+            <textarea name="txt" id="textarea" cols="40" rows="10"></textarea>
+        </div>
+        <div id="footer"><input type="submit" value="Submit" onclick="alert('Feedback Successfully Submitted')" id="submit"> <input type="reset" value="Reset" id="reset">
+        </div>
+    </form>
+    
+</body>
+</html>
